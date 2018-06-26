@@ -1,7 +1,7 @@
 object frmUsuarios: TfrmUsuarios
-  Left = 428
+  Left = 359
   Height = 406
-  Top = 148
+  Top = 164
   Width = 654
   Caption = 'Usuarios'
   ClientHeight = 406
@@ -45,6 +45,7 @@ object frmUsuarios: TfrmUsuarios
       Width = 145
       ArrowKeysTraverseList = False
       ItemHeight = 13
+      OnSelect = cboGrupoSelect
       TabOrder = 0
       TabStop = False
     end
@@ -92,6 +93,25 @@ object frmUsuarios: TfrmUsuarios
       Top = 88
       Width = 80
       Caption = 'Cancelar Filtro'
+    end
+    object lblQtdRegistro: TLabel
+      Left = 208
+      Height = 13
+      Top = 96
+      Width = 84
+      AutoSize = False
+      Caption = '100000 Registros'
+      ParentColor = False
+    end
+    object lblFiltroAtivo: TLabel
+      Left = 320
+      Height = 13
+      Top = 96
+      Width = 84
+      AutoSize = False
+      Caption = 'Filtro Ativo'
+      ParentColor = False
+      Visible = False
     end
   end
   object pnConteudoUsuario: TPanel

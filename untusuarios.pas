@@ -15,6 +15,8 @@ type
     conMysql: TMySQL51Connection;
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
+    lblQtdRegistro: TLabel;
+    lblFiltroAtivo: TLabel;
     pnFiltroUsuarios: TPanel;
     pnConteudoUsuario: TPanel;
     cboGrupo: TComboBox;
@@ -27,6 +29,7 @@ type
     sbtnCancelarFiltro: TSpeedButton;
     sbtnFiltrar: TSpeedButton;
     transMysql: TSQLTransaction;
+    procedure cboGrupoSelect(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure CarregarTodosDadosTabela();
     procedure CarregarComboBoxGrupo();
@@ -35,6 +38,9 @@ type
     { Private declarations }
   public
     { Public declarations }
+  protected
+    lstGrupo: TStringList;
+    minhaQuery: TSQLQuery;
   end;
 
 var
@@ -46,33 +52,58 @@ implementation
 
 procedure TfrmUsuarios.FormCreate(Sender: TObject);
 begin
+      lstGrupo:= TStringList.Create;
+      minhaQuery:= TSQLQuery.Create(nil);
+      minhaQuery.SQLConnection:= conMysql;
       CarregarTodosDadosTabela;
       CarregarComboBoxGrupo;
+
+end;
+
+procedure TfrmUsuarios.cboGrupoSelect(Sender: TObject);
+begin
+    //ShowMessage();
+
+    minhaQuery.Close;
+    minhaQuery.SQL.Clear;
+    minhaQuery.SQL.Add('select us.nomecompleto AS "Nome Completo", us.login AS "Login", gu.nome AS "Grupo" from ');
+    minhaQuery.SQL.Add('usuariosistema as us inner join grupousuario as gu on (us.oid_grupo = gu.oid_grupo) ');
+    minhaQuery.SQL.Add('where gu.nome = :pNomeGrupo;');
+    minhaQuery.Params.ParamByName('pNomeGrupo').AsString:=cboGrupo.items[cboGrupo.ItemIndex];
+
+    minhaQuery.Open;
+    DBGrid1.Refresh;
+    DBGrid1.AutoAdjustColumns;
+    lblQtdRegistro.Visible:=true;
+    lblQtdRegistro.Caption:=Inttostr(minhaQuery.RecordCount) + ' Registros';
+    lblFiltroAtivo.Visible:=true;
 end;
 
 
 
 procedure TfrmUsuarios.CarregarComboBoxGrupo();
 var
-   minhaQuery: TSQLQuery;
+   minhaQueryGrupo: TSQLQuery;
 begin
-
-      minhaQuery:= TSQLQuery.Create(nil);
+      lstGrupo.Clear;
+      minhaQueryGrupo:= TSQLQuery.Create(nil);
       try
         cboGrupo.Items.Clear;
-        minhaQuery.SQLConnection:= conMysql;
-        minhaQuery.SQL.Text:='select * from grupousuario order by nome;';
-        minhaQuery.Open;
-        minhaQuery.Active:=true;
+        minhaQueryGrupo.SQLConnection:= conMysql;
+        minhaQueryGrupo.SQL.Text:='select * from grupousuario order by oid_grupo;';
+        minhaQueryGrupo.Open;
+        minhaQueryGrupo.Active:=true;
         try
-            minhaQuery.First;
-            while not minhaQuery.EOF do
+            minhaQueryGrupo.First;
+            while not minhaQueryGrupo.EOF do
             begin
-                 cboGrupo.Items.Add(minhaQuery.FieldByName('nome').AsString);
-                 minhaQuery.Next;
+                 lstGrupo.Add(minhaQueryGrupo.FieldByName('nome').AsString);
+                 //cboGrupo.Items.Add(minhaQuery.FieldByName('nome').AsString);
+                 minhaQueryGrupo.Next;
             end;
         finally
-          minhaQuery.Close;
+          cboGrupo.Items:=lstGrupo;
+          minhaQueryGrupo.Close;
         end;
 
       except
@@ -81,18 +112,20 @@ begin
 end;
 
 procedure TfrmUsuarios.CarregarTodosDadosTabela();
-var
-  minhaQuery: TSQLQuery;
-begin
-     minhaQuery:= TSQLQuery.Create(nil);
-  try
 
-    minhaQuery.SQLConnection:= conMysql;
-    minhaQuery.SQL.Text:= 'select * from usuariosistema;';
+begin
+
+  try
+    minhaQuery.Close;
+    //minhaQuery.SQL.Text:= 'select * from usuariosistema;';
+    minhaQuery.SQL.Add('select us.nomecompleto AS "Nome Completo", us.login AS "Login", gu.nome AS "Grupo" from');
+    minhaQuery.SQL.Add('usuariosistema as us inner join grupousuario as gu on (us.oid_grupo = gu.oid_grupo);');
     minhaQuery.open;
     minhaQuery.Active:=true;
     DBGrid1.DataSource.DataSet:= minhaQuery;
     DBGrid1.AutoAdjustColumns;
+
+    lblQtdRegistro.Caption:=Inttostr(minhaQuery.RecordCount) + ' Registros';
 
   except
     on E : Exception do

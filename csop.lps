@@ -4,13 +4,13 @@
     <PathDelim Value="\"/>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="5">
+    <Units Count="6">
       <Unit0>
         <Filename Value="csop.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="16"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="30"/>
       </Unit0>
       <Unit1>
         <Filename Value="untprincipal.pas"/>
@@ -18,18 +18,17 @@
         <ComponentName Value="frmPrincipal"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="65"/>
-        <CursorPos X="9" Y="71"/>
-        <UsageCount Value="27"/>
+        <CursorPos X="24" Y="13"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="untpedidos.pas"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="2"/>
         <CursorPos X="5" Y="6"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -39,9 +38,10 @@
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="21"/>
-        <CursorPos X="5" Y="33"/>
-        <UsageCount Value="13"/>
+        <TopLine Value="59"/>
+        <CursorPos X="33" Y="79"/>
+        <FoldState Value=" T3ie0Sg"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit3>
@@ -52,127 +52,135 @@
         <CursorPos Y="6937"/>
         <UsageCount Value="10"/>
       </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus\lcl\include\customcombobox.inc"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="935"/>
+        <CursorPos Y="951"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit5>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="26" Column="39" TopLine="15"/>
+        <Caret Line="53" TopLine="43"/>
       </Position1>
       <Position2>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="42" Column="33" TopLine="30"/>
+        <Caret Line="99" Column="45" TopLine="82"/>
       </Position2>
       <Position3>
-        <Filename Value="untprincipal.pas"/>
-        <Caret Line="12" Column="20" TopLine="10"/>
+        <Filename Value="untusuarios.pas"/>
+        <Caret Line="92" Column="36" TopLine="82"/>
       </Position3>
       <Position4>
-        <Filename Value="untprincipal.pas"/>
-        <Caret Line="76" Column="3" TopLine="68"/>
+        <Filename Value="untusuarios.pas"/>
+        <Caret Line="105" Column="3" TopLine="83"/>
       </Position4>
       <Position5>
-        <Filename Value="untprincipal.pas"/>
-        <Caret Line="7" Column="18"/>
+        <Filename Value="untusuarios.pas"/>
+        <Caret Line="81" Column="5" TopLine="74"/>
       </Position5>
       <Position6>
-        <Filename Value="untprincipal.pas"/>
-        <Caret Line="71" Column="49" TopLine="50"/>
+        <Filename Value="untusuarios.pas"/>
+        <Caret Line="33" Column="15" TopLine="22"/>
       </Position6>
       <Position7>
-        <Filename Value="untprincipal.pas"/>
-        <Caret Line="72" Column="48" TopLine="60"/>
+        <Filename Value="untusuarios.pas"/>
+        <Caret Line="75" Column="72" TopLine="56"/>
       </Position7>
       <Position8>
-        <Filename Value="untprincipal.pas"/>
-        <Caret Line="73" Column="7" TopLine="60"/>
+        <Filename Value="untusuarios.pas"/>
+        <Caret Line="53" Column="17" TopLine="41"/>
       </Position8>
       <Position9>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="14" Column="15" TopLine="5"/>
+        <Caret Line="80" Column="35" TopLine="68"/>
       </Position9>
       <Position10>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="27" Column="16" TopLine="25"/>
+        <Caret Line="62" TopLine="49"/>
       </Position10>
       <Position11>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="29" Column="16" TopLine="27"/>
+        <Caret Line="58" TopLine="39"/>
       </Position11>
       <Position12>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="52" Column="28" TopLine="37"/>
+        <Caret Line="33" Column="39" TopLine="18"/>
       </Position12>
       <Position13>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="53" Column="28" TopLine="38"/>
+        <Caret Line="61" Column="51" TopLine="49"/>
       </Position13>
       <Position14>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="56" Column="49" TopLine="42"/>
+        <Caret Line="85" Column="38" TopLine="68"/>
       </Position14>
       <Position15>
-        <Filename Value="untusuarios.pas"/>
-        <Caret Line="59" Column="25" TopLine="42"/>
+        <Filename Value="untprincipal.pas"/>
+        <Caret Line="13" Column="24"/>
       </Position15>
       <Position16>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="61" Column="28" TopLine="45"/>
+        <Caret Line="64" Column="113" TopLine="56"/>
       </Position16>
       <Position17>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="59" Column="23" TopLine="47"/>
+        <Caret Line="63" TopLine="56"/>
       </Position17>
       <Position18>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="60" Column="23" TopLine="48"/>
+        <Caret Line="64" TopLine="56"/>
       </Position18>
       <Position19>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="59" Column="23" TopLine="47"/>
+        <Caret Line="65" TopLine="56"/>
       </Position19>
       <Position20>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="57" Column="31" TopLine="39"/>
+        <Caret Line="66" TopLine="56"/>
       </Position20>
       <Position21>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="63" Column="4" TopLine="41"/>
+        <Caret Line="67" TopLine="56"/>
       </Position21>
       <Position22>
-        <Filename Value="untusuarios.pas"/>
-        <Caret Line="62" Column="4" TopLine="40"/>
+        <Filename Value="C:\lazarus\lcl\include\customcombobox.inc"/>
+        <Caret Line="947" TopLine="935"/>
       </Position22>
       <Position23>
-        <Filename Value="untusuarios.pas"/>
-        <Caret Line="57" Column="18" TopLine="45"/>
+        <Filename Value="C:\lazarus\lcl\include\customcombobox.inc"/>
+        <Caret Line="949" TopLine="935"/>
       </Position23>
       <Position24>
-        <Filename Value="untusuarios.pas"/>
-        <Caret Line="66" Column="30" TopLine="48"/>
+        <Filename Value="C:\lazarus\lcl\include\customcombobox.inc"/>
+        <Caret Line="950" TopLine="935"/>
       </Position24>
       <Position25>
-        <Filename Value="untusuarios.pas"/>
-        <Caret Line="53" TopLine="43"/>
+        <Filename Value="C:\lazarus\lcl\include\customcombobox.inc"/>
+        <Caret Line="951" TopLine="935"/>
       </Position25>
       <Position26>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="99" Column="45" TopLine="82"/>
+        <Caret Line="68" Column="39" TopLine="56"/>
       </Position26>
       <Position27>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="92" Column="36" TopLine="82"/>
+        <Caret Line="70" Column="22" TopLine="56"/>
       </Position27>
       <Position28>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="105" Column="3" TopLine="83"/>
+        <Caret Line="73" Column="31" TopLine="61"/>
       </Position28>
       <Position29>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="81" Column="5" TopLine="74"/>
+        <Caret Line="76" Column="59" TopLine="64"/>
       </Position29>
       <Position30>
         <Filename Value="untusuarios.pas"/>
-        <Caret Line="33" Column="15" TopLine="22"/>
+        <Caret Line="71" Column="14" TopLine="58"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
